@@ -2,16 +2,17 @@
   (:use [clojure.pprint] (compojure handler
                                     [core :only (GET POST defroutes)]) 
         
-        [datomic.api :only [q db] :as d])
+        #_[datomic.api :only [q db] :as d])
   (:require
     compojure.route
     [ring.adapter.jetty :as jetty]
     [ring.util.response :as response]
     [net.cgrand.enlive-html :as en]
     ))
-(def uri "datomic:mem://url")
+;(def uri "datomic:mem://url")
 ;(def server (jetty/run-jetty #'app {:port 8080 :join? false}))
-(defonce conn (d/connect uri))
+;(defonce conn (d/connect uri))
+
 (defonce counter (atom 999))
 (defonce urls (atom {}))
 (defn shorten
