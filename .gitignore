@@ -16,3 +16,5 @@ pom.xml
 .externalToolBuilders/ccw.builder.launch
 
 .settings/ccw.repl.cmdhistory.prefs
+
+*.log
